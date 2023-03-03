@@ -17,7 +17,7 @@
 ## 📑 <span id="visaogeral">Visão geral</span>
 <a href="#inicio">⬆️ Voltar para o topo</a>
 
-Usando Spring Boot, foi criada uma API para gerenciar Pessoas. Esta API permiti:  
+Usando Spring Boot, foi criada uma API para gerenciar Pessoas. Esta API permite:  
 - Criar uma pessoa
 - Editar uma pessoa
 - Consultar uma pessoa
