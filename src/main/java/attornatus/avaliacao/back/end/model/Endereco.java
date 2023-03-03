@@ -32,7 +32,7 @@ public class Endereco {
     private String cep;
     
 	@Column(nullable = false)
-    private String numero;
+    private Integer numero;
     
 	@Column(nullable = false)
     private String cidade;

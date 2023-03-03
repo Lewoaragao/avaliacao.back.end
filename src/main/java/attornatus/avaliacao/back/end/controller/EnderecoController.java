@@ -26,13 +26,13 @@ public class EnderecoController {
         return enderecoService.criarEndereco(pessoaId, endereco);
     }
     
-    @GetMapping
-    public List<Endereco> listarEnderecos(@PathVariable Long pessoaId) {
-        return enderecoService.listarEnderecos(pessoaId);
-    }
-    
     @PutMapping("/{enderecoId}/principal")
     public void definirEnderecoPrincipal(@PathVariable Long pessoaId, @PathVariable Long enderecoId) {
         enderecoService.definirEnderecoPrincipal(pessoaId, enderecoId);
+    }
+    
+    @GetMapping
+    public List<Endereco> listarEnderecos(@PathVariable Long pessoaId) {
+    	return enderecoService.listarEnderecos(pessoaId);
     }
 }
