@@ -1,5 +1,32 @@
 # Avaliação Back-end para Attornatus.
- 
+## Visão geral
+Usando Spring Boot, foi criada uma API para gerenciar Pessoas. Esta API permiti:  
+- Criar uma pessoa
+- Editar uma pessoa
+- Consultar uma pessoa
+- Listar pessoas
+- Criar endereço para pessoa
+- Listar endereços da pessoa
+- Informar qual endereço é o principal da pessoa  
+
+### Entidade Pessoa (tabela = t_pessoa)
+Tipo | Nome
+:--- | :---
+`Long` | ID
+`String` | Nome
+`LocalDate` | Data de nascimento
+`List<Endereco>` | Enderecos
+
+### Entidade Endereço (tabela = t_endereco)
+Tipo | Nome
+:--- | :---
+`Long` | ID
+`String` | Logradouro
+`String` | CEP
+`Integer` | Numero
+`String` | Cidade
+  
+## Perguntas
 1. Durante a implementação de uma nova funcionalidade de software solicitada, quais critérios você avalia e implementa para garantia de qualidade de software?
 
 > Resposta.
@@ -9,7 +36,6 @@
 > Resposta.
 
 ## Informações
-
 - Clean Code
 - Teste unitários
 - Banco de dados H2
@@ -18,13 +44,11 @@
 - Boas práticas na programação, estrutura, arquitetura e organização do projeto
 
 ## Tecnologias
-
-![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white)
-![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
-![Apache Maven](https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white)
-![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
-![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+Desenvolvimento | Versionamento | Teste 
+:-------------: | :-----------: | :----
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white) | ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) | ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white) | ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+![Apache Maven](https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white) 
 
 ## Documentação
 - `URL_BASE_PESSOA` = /api/pessoas
