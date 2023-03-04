@@ -22,12 +22,11 @@ public class PessoaService {
 	private PessoaRepository pessoaRepository;
 
 	public PessoaResponseDTO criarPessoa(PessoaRequestDTO pessoaRequest) {
-		Pessoa pessoa = pessoaRepository.save(Pessoa.builder()
-				.nome(pessoaRequest.getNome())
-				.dataNascimento(pessoaRequest.getDataNascimento())
-				.enderecos(pessoaRequest.getEnderecos())
-				.build());
-		return PessoaResponseDTO.of(pessoa);
+		Pessoa pessoa = new Pessoa();
+		pessoa.setNome(pessoaRequest.getNome());
+		pessoa.setDataNascimento(pessoaRequest.getDataNascimento());
+		pessoa.setEnderecos(pessoaRequest.getEnderecos());
+		return PessoaResponseDTO.of(pessoaRepository.save(pessoa));
 	}
 
 	public PessoaResponseDTO atualizarPessoa(Long id, PessoaRequestDTO pessoaRequest) throws NotFoundException {
@@ -46,7 +45,11 @@ public class PessoaService {
 		return pessoaRepository.findAll(pageRequestDTO).map(PessoaResponseDTO::of);
 	}
 
-	private Pessoa validarPessoaExistente(Long id) throws NotFoundException {
+	public void deletarTodasPessoas() {
+		pessoaRepository.deleteAll();
+	}
+
+	public Pessoa validarPessoaExistente(Long id) throws NotFoundException {
 		return pessoaRepository.findById(id).orElseThrow(() -> new NotFoundException());
 	}
 }

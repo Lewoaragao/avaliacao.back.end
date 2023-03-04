@@ -1,8 +1,9 @@
 package attornatus.avaliacao.back.end.controller;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.crossstore.ChangeSetPersister.NotFoundException;
+import org.springframework.data.domain.Page;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,7 +12,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import attornatus.avaliacao.back.end.model.Endereco;
+import attornatus.avaliacao.back.end.requestDTO.EnderecoRequestDTO;
+import attornatus.avaliacao.back.end.requestDTO.PageRequestDTO;
+import attornatus.avaliacao.back.end.responseDTO.EnderecoResponseDTO;
 import attornatus.avaliacao.back.end.service.EnderecoService;
 
 @RestController
@@ -22,17 +25,17 @@ public class EnderecoController {
     private EnderecoService enderecoService;
     
     @PostMapping
-    public Endereco criarEndereco(@PathVariable Long pessoaId, @RequestBody Endereco endereco) {
-        return enderecoService.criarEndereco(pessoaId, endereco);
+    public ResponseEntity<EnderecoResponseDTO> criarEndereco(@PathVariable Long pessoaId, @RequestBody EnderecoRequestDTO enderecoRequest) throws NotFoundException {
+        return ResponseEntity.ok().body(enderecoService.criarEndereco(pessoaId, enderecoRequest));
     }
     
     @PutMapping("/{enderecoId}/principal")
-    public void definirEnderecoPrincipal(@PathVariable Long pessoaId, @PathVariable Long enderecoId) {
-        enderecoService.definirEnderecoPrincipal(pessoaId, enderecoId);
+    public ResponseEntity<EnderecoResponseDTO> definirEnderecoPrincipal(@PathVariable Long pessoaId, @PathVariable Long enderecoId) throws NotFoundException {
+    	return ResponseEntity.ok().body(enderecoService.definirEnderecoPrincipal(pessoaId, enderecoId));
     }
     
     @GetMapping
-    public List<Endereco> listarEnderecos(@PathVariable Long pessoaId) {
-    	return enderecoService.listarEnderecos(pessoaId);
+    public ResponseEntity<Page<EnderecoResponseDTO>> listarEnderecos(@PathVariable Long pessoaId, PageRequestDTO pageRequestDTO) throws NotFoundException {
+    	return ResponseEntity.ok().body(enderecoService.listarEnderecos(pessoaId, pageRequestDTO));
     }
 }
