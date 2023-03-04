@@ -1,6 +1,6 @@
 # <img id="inicio" src="https://scontent.ffor1-2.fna.fbcdn.net/v/t39.30808-1/291155788_749134162931729_5904111411624050166_n.jpg?stp=cp0_dst-jpg_e15_p120x120_q65&_nc_cat=103&ccb=1-7&_nc_sid=dbb9e7&_nc_ohc=PL112LV44swAX84nPDX&_nc_ht=scontent.ffor1-2.fna&oh=00_AfAq8QYCsqG06awIpXJrQtvXU9RXr5_L_LpMg6u7kAT5zA&oe=64070FCA" height=30/> Avaliação Back-end para Attornatus
 
-![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=status&message=em%20desenvolvimento&color=yellow&style=for-the-badge)
+![Badge Concluído](http://img.shields.io/static/v1?label=status&message=Concluído&color=green&style=for-the-badge)
 
 ## 🗂 Sumário
 - <a href="#visaogeral">Visão geral</a>
@@ -13,6 +13,7 @@
 - <a href="#documentacao">Documentação</a>
   - <a href="#fluxopessoa">Fluxo Pessoa</a>
   - <a href="#fluxoendereco">Fluxo Endereço</a>
+- <a href="#proximaatualizacao">Próxima atualização</a>
 
 ## 📑 <span id="visaogeral">Visão geral</span>
 <a href="#inicio">⬆️ Voltar para o topo</a>
@@ -133,3 +134,7 @@ Endpoint | Method | PathVariable | RequestBody | Response
 `URL_BASE_PESSOA/{pessoaId}/enderecos/{enderecoId}/principal` | <img src="https://img.shields.io/badge/-Put-blue?style=for-the-badge"> | ID Pessoa, ID Endereco | Vazio | Definir endereço principal
 `URL_BASE_PESSOA/{pessoaId}/enderecos` | <img src="https://img.shields.io/badge/-Get-green?style=for-the-badge"> | ID Pessoa | Vazio | Listar endereços da pessoa
 `URL_BASE_PESSOA/{pessoaId}/enderecos/principal` | <img src="https://img.shields.io/badge/-Get-green?style=for-the-badge"> | ID Pessoa | Vazio | Consultar endereço principal da pessoa
+
+
+## <span id="proximaatualizacao">Próxima atualização</span>
+- [ ] Implementar documentação via Swagger
