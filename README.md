@@ -111,5 +111,6 @@ Endpoint | Method | PathVariable | RequestBody | Response
 Endpoint | Method | PathVariable | RequestBody | Response
 :------- | :----: | :----------- | :---------- | :-------
 `URL_BASE_PESSOA/{pessoaId}/enderecos` | <img src="https://img.shields.io/badge/-Post-yellow?style=for-the-badge"> | ID Pessoa | Endereco | Criar endereço
-`URL_BASE_PESSOA/{pessoaId}/enderecos` | <img src="https://img.shields.io/badge/-Put-blue?style=for-the-badge"> | ID Pessoa, ID Endereco | Vazio | Definir endereço principal
+`URL_BASE_PESSOA/{pessoaId}/enderecos/{enderecoId}/principal` | <img src="https://img.shields.io/badge/-Put-blue?style=for-the-badge"> | ID Pessoa, ID Endereco | Vazio | Definir endereço principal
 `URL_BASE_PESSOA/{pessoaId}/enderecos` | <img src="https://img.shields.io/badge/-Get-green?style=for-the-badge"> | ID Pessoa | Vazio | Listar endereços da pessoa
+`URL_BASE_PESSOA/{pessoaId}/enderecos/principal` | <img src="https://img.shields.io/badge/-Get-green?style=for-the-badge"> | ID Pessoa | Vazio | Consultar endereço principal da pessoa
