@@ -70,7 +70,7 @@ Tipo | Nome
 
 1. Durante a implementação de uma nova funcionalidade de software solicitada, quais critérios você avalia e implementa para garantia de qualidade de software?
 
-> Resposta.
+> Se está cumprindo as medidas de segurança de acordo com as regras de negócio, se atendeu as necessidades propostas da nova funcionalidade criando testes automatizados, reviso o código para conferir se não existe algum método ou comentários que não são para subir na versão de produção, crio uma documentação clara e abrangente para ajudar a garantir que outros desenvolvedores possam entender e mander o código no futuro, após ir para produção monitorar o desempenho da nova funcionalidade em diferentes situações para poder ajudar a identificar possíveis problemas de desempenho e garantir que esteja funcionando de maneira eficiente.
 
 2. Em qual etapa da implementação você considera a qualidade de software?
 
