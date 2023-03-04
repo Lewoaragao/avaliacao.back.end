@@ -74,7 +74,7 @@ Tipo | Nome
 
 2. Em qual etapa da implementação você considera a qualidade de software?
 
-> Resposta.
+> Desde o planejamento até a implantação, conferindo principalmente na hora do desenvolvimento se foi capturado algum erro que não havia sido pensado gerando uma exceção, para que o mesmo possa ser logo tratado.
 
 ## ℹ <span id="informacoes">Informações</span>
 <a href="#inicio">⬆️ Voltar para o topo</a>
