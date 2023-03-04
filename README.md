@@ -100,6 +100,15 @@ Desenvolvimento | Versionamento | Teste
 - `URL_BASE_PESSOA` = /api/pessoas
 
 ### <span id="fluxopessoa">Fluxo Pessoa</span>
+
+Exemplo Pessoa:
+```json
+{
+    "nome" : "João",
+    "dataNascimento" : "2000-01-01"
+}
+```
+
 Endpoint | Method | PathVariable | RequestBody | Response
 :------- | :----: | :----------- | :---------- | :-------
 `URL_BASE_PESSOA` | <img src="https://img.shields.io/badge/-Post-yellow?style=for-the-badge"> | Vazio | Pessoa | Criar pessoa
@@ -108,6 +117,16 @@ Endpoint | Method | PathVariable | RequestBody | Response
 `URL_BASE_PESSOA` | <img src="https://img.shields.io/badge/-Get-green?style=for-the-badge"> | Vazio | Vazio | Listar pessoas
 
 ### <span id="fluxoendereco">Fluxo Endereço</span>
+Exemplo Endereço:
+```json
+{
+    "logradouro" : "Rua logradouro",
+    "cep" : "60000-000",
+    "numero" : 60,
+    "cidade" : "Fortaleza"
+}
+```
+
 Endpoint | Method | PathVariable | RequestBody | Response
 :------- | :----: | :----------- | :---------- | :-------
 `URL_BASE_PESSOA/{pessoaId}/enderecos` | <img src="https://img.shields.io/badge/-Post-yellow?style=for-the-badge"> | ID Pessoa | Endereco | Criar endereço
