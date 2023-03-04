@@ -49,7 +49,7 @@ public class EnderecoService {
 		Page<EnderecoResponseDTO> enderecosPageDTO = enderecosPage.map(EnderecoResponseDTO::of);
 		return enderecosPageDTO;
 	}
-	
+
 	public void deletarTodosEnderecos() {
 		enderecoRepository.deleteAll();
 	}
@@ -66,5 +66,15 @@ public class EnderecoService {
 		});
 		pessoaRepository.save(pessoa);
 		return EnderecoResponseDTO.of(enderecoRepository.findById(enderecoId).get());
+	}
+
+	public EnderecoResponseDTO consultarEnderecoPrincipal(Long pessoaId) throws NotFoundException {
+		Pessoa pessoa = pessoaService.validarPessoaExistente(pessoaId);
+		for (Endereco endereco : pessoa.getEnderecos()) {
+			if (endereco.isPrincipal()) {
+				return EnderecoResponseDTO.of(endereco);
+			}
+		}
+		return null;
 	}
 }

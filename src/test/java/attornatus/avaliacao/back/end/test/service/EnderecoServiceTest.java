@@ -96,8 +96,35 @@ public class EnderecoServiceTest {
 		EnderecoResponseDTO enderecoCriadoDois = enderecoService.criarEndereco(pessoaCriada.getId(), enderecoRequestDois);
 		enderecoService.definirEnderecoPrincipal(pessoaCriada.getId(), enderecoCriadoDois.getId());
 		PessoaResponseDTO pessoaAtualizada = pessoaService.consultarPessoa(pessoaCriada.getId());
+		EnderecoResponseDTO enderecoPrincipalPessoaAtualizada = enderecoService.consultarEnderecoPrincipal(pessoaAtualizada.getId());
 		assertTrue(pessoaAtualizada != null);
-		assertNotNull(pessoaAtualizada.getEnderecoPrincipal());
-		assertEquals(enderecoCriadoDois.getId(), pessoaAtualizada.getEnderecoPrincipal().getId());
+		assertNotNull(enderecoPrincipalPessoaAtualizada);
+		assertEquals(enderecoCriadoDois.getId(), enderecoPrincipalPessoaAtualizada.getId());
+	}
+	
+	@Test
+	public void testConsultarEnderecoPrincipal() throws NotFoundException {
+		PessoaRequestDTO pessoaRequest = new PessoaRequestDTO();
+		pessoaRequest.setNome("João");
+		pessoaRequest.setDataNascimento(LocalDate.of(1990, 1, 1));
+		PessoaResponseDTO pessoaCriada = pessoaService.criarPessoa(pessoaRequest);
+		EnderecoRequestDTO enderecoRequestUm = new EnderecoRequestDTO();
+		enderecoRequestUm.setLogradouro("Rua A");
+		enderecoRequestUm.setCep("12345-678");
+		enderecoRequestUm.setNumero(10);
+		enderecoRequestUm.setCidade("São Paulo");
+		enderecoService.criarEndereco(pessoaCriada.getId(), enderecoRequestUm);
+		EnderecoRequestDTO enderecoRequestDois = new EnderecoRequestDTO();
+		enderecoRequestDois.setLogradouro("Rua B");
+		enderecoRequestDois.setCep("87654-321");
+		enderecoRequestDois.setNumero(20);
+		enderecoRequestDois.setCidade("Rio de Janeiro");
+		EnderecoResponseDTO enderecoCriadoDois = enderecoService.criarEndereco(pessoaCriada.getId(), enderecoRequestDois);
+		enderecoService.definirEnderecoPrincipal(pessoaCriada.getId(), enderecoCriadoDois.getId());
+		PessoaResponseDTO pessoaAtualizada = pessoaService.consultarPessoa(pessoaCriada.getId());
+		EnderecoResponseDTO enderecoPrincipalPessoaAtualizada = enderecoService.consultarEnderecoPrincipal(pessoaAtualizada.getId());
+		assertTrue(pessoaAtualizada != null);
+		assertNotNull(enderecoPrincipalPessoaAtualizada);
+		assertEquals(enderecoCriadoDois.getId(), enderecoPrincipalPessoaAtualizada.getId());
 	}
 }

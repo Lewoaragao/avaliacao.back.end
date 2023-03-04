@@ -34,6 +34,11 @@ public class EnderecoController {
     	return ResponseEntity.ok().body(enderecoService.definirEnderecoPrincipal(pessoaId, enderecoId));
     }
     
+    @GetMapping("/principal")
+    public ResponseEntity<EnderecoResponseDTO> consultarEnderecoPrincipal(@PathVariable Long pessoaId) throws NotFoundException {
+    	return ResponseEntity.ok().body(enderecoService.consultarEnderecoPrincipal(pessoaId));
+    }
+    
     @GetMapping
     public ResponseEntity<Page<EnderecoResponseDTO>> listarEnderecos(@PathVariable Long pessoaId, PageRequestDTO pageRequestDTO) throws NotFoundException {
     	return ResponseEntity.ok().body(enderecoService.listarEnderecos(pessoaId, pageRequestDTO));
