@@ -67,7 +67,7 @@ Tipo | Nome
    4. Iniciar executando ou em modo debug
   
 
-## 👩‍💻 <span id="executartestes">Executar testes</span>
+## 🧩 <span id="executartestes">Executar testes</span>
 1. Abrir Git Bash
 2. Digitar `git clone https://github.com/Lewoaragao/avaliacao.back.end.git`
    1. Caso tenha use a IDE VSCode
@@ -157,5 +157,5 @@ Endpoint | Method | PathVariable | RequestBody | Response
 `URL_BASE_PESSOA/{pessoaId}/enderecos/principal` | <img src="https://img.shields.io/badge/-Get-green?style=for-the-badge"> | ID Pessoa | Vazio | Consultar endereço principal da pessoa
 
 
-## <span id="proximaatualizacao">Próxima atualização</span>
+## 🆕 <span id="proximaatualizacao">Próxima atualização</span>
 - [ ] Implementar documentação via Swagger
