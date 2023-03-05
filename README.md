@@ -7,6 +7,7 @@
   - <a href="#entidadepessoa">Entidade Pessoa</a>
   - <a href="#entidadeendereco">Entidade Endereço</a>
 - <a href="#executarprojeto">Executar projeto</a>
+- <a href="#executartestes">Executar testes</a>
 - <a href="#perguntas">Perguntas</a>
 - <a href="#informacoes">Informações</a>
 - <a href="#tecnologias">Tecnologias</a>
@@ -63,6 +64,26 @@ Tipo | Nome
       7. Em `Project` selecionar o `pom.xml`
       8. Clicar em `Finish`
    3. <span id="passoIii">Procurar</span> a classe `Application.java` que fica na pasta `src/main/java`
+   4. Iniciar executando ou em modo debug
+  
+
+## 👩‍💻 <span id="executartestes">Executar testes</span>
+1. Abrir Git Bash
+2. Digitar `git clone https://github.com/Lewoaragao/avaliacao.back.end.git`
+   1. Caso tenha use a IDE VSCode
+      1. Digitar `cd avaliacao.back.end`
+      2. Digitar `code .`
+      3. Pular para o passo <a href="#passoIii">iii</a>
+   2. Caso tenha outra IDE (Exemplo: _Eclipe_)
+      1. Clicar em `File`
+      2. Clicar em `Import`
+      3. Clicar na pasta `Maven`
+      4. Clicar em `Existing Maven Projects`
+      5. Clicar em `Browse`
+      6. Procurar o diretório do projeto onde foi clonado
+      7. Em `Project` selecionar o `pom.xml`
+      8. Clicar em `Finish`
+   3. <span id="passoIii">Procurar</span> a classe `PessoaServiceTest.java` ou a `EnderecoServiceTeste.java` que fica na pasta `src/test/java`
    4. Iniciar executando ou em modo debug
   
 ## 💬 <span id="perguntas">Perguntas</span>
