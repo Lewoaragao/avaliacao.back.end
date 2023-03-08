@@ -122,7 +122,7 @@ Desenvolvimento | Versionamento | Teste
 ## 📚 <span id="documentacao">Documentação</span> 
 <a href="#inicio">⬆️ Voltar para o topo</a>
 
-- `URL_BASE_PESSOA` = /api/pessoas
+- `URL_BASE` = /api/pessoas
 
 ### <span id="fluxopessoa">Fluxo Pessoa</span>
 
@@ -136,10 +136,10 @@ Exemplo Pessoa:
 
 Endpoint | Method | PathVariable | RequestBody | Response
 :------- | :----: | :----------- | :---------- | :-------
-`URL_BASE_PESSOA` | <img src="https://img.shields.io/badge/-Post-yellow?style=for-the-badge"> | Vazio | Pessoa | Criar pessoa
-`URL_BASE_PESSOA` | <img src="https://img.shields.io/badge/-Put-blue?style=for-the-badge"> | ID Pessoa | Pessoa | Atualizar pessoa
-`URL_BASE_PESSOA` | <img src="https://img.shields.io/badge/-Get-green?style=for-the-badge"> | ID Pessoa | Vazio | Consultar pessoa
-`URL_BASE_PESSOA` | <img src="https://img.shields.io/badge/-Get-green?style=for-the-badge"> | Vazio | Vazio | Listar pessoas
+`URL_BASE` | <img src="https://img.shields.io/badge/-Post-yellow?style=for-the-badge"> | Vazio | Pessoa | Criar pessoa
+`URL_BASE` | <img src="https://img.shields.io/badge/-Put-blue?style=for-the-badge"> | ID Pessoa | Pessoa | Atualizar pessoa
+`URL_BASE` | <img src="https://img.shields.io/badge/-Get-green?style=for-the-badge"> | ID Pessoa | Vazio | Consultar pessoa
+`URL_BASE` | <img src="https://img.shields.io/badge/-Get-green?style=for-the-badge"> | Vazio | Vazio | Listar pessoas
 
 ### <span id="fluxoendereco">Fluxo Endereço</span>
 Exemplo Endereço:
@@ -154,17 +154,16 @@ Exemplo Endereço:
 
 Endpoint | Method | PathVariable | RequestBody | Response
 :------- | :----: | :----------- | :---------- | :-------
-`URL_BASE_PESSOA/{pessoaId}/enderecos` | <img src="https://img.shields.io/badge/-Post-yellow?style=for-the-badge"> | ID Pessoa | Endereco | Criar endereço
-`URL_BASE_PESSOA/{pessoaId}/enderecos/{enderecoId}/principal` | <img src="https://img.shields.io/badge/-Put-blue?style=for-the-badge"> | ID Pessoa, ID Endereco | Vazio | Definir endereço principal
-`URL_BASE_PESSOA/{pessoaId}/enderecos` | <img src="https://img.shields.io/badge/-Get-green?style=for-the-badge"> | ID Pessoa | Vazio | Listar endereços da pessoa
-`URL_BASE_PESSOA/{pessoaId}/enderecos/principal` | <img src="https://img.shields.io/badge/-Get-green?style=for-the-badge"> | ID Pessoa | Vazio | Consultar endereço principal da pessoa
+`URL_BASE/{pessoaId}/enderecos` | <img src="https://img.shields.io/badge/-Post-yellow?style=for-the-badge"> | ID Pessoa | Endereco | Criar endereço
+`URL_BASE/{pessoaId}/enderecos/{enderecoId}/principal` | <img src="https://img.shields.io/badge/-Put-blue?style=for-the-badge"> | ID Pessoa, ID Endereco | Vazio | Definir endereço principal
+`URL_BASE/{pessoaId}/enderecos` | <img src="https://img.shields.io/badge/-Get-green?style=for-the-badge"> | ID Pessoa | Vazio | Listar endereços da pessoa
+`URL_BASE/{pessoaId}/enderecos/principal` | <img src="https://img.shields.io/badge/-Get-green?style=for-the-badge"> | ID Pessoa | Vazio | Consultar endereço principal da pessoa
 
 
 ## 🆕 <span id="proximaatualizacao">Próxima atualização</span>
 <a href="#inicio">⬆️ Voltar para o topo</a>
 
 - [ ] Implementar documentação via Swagger
-
 
 ## 📞 <span id="contato">Contato</span>
 <a href="#inicio">⬆️ Voltar para o topo</a>
